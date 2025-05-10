@@ -30,6 +30,8 @@ namespace HobbyManiaManager
             this.labelTitle.Text = $"{Movie.Title}({Movie.ReleaseDate.Year})";
             this.labelTitle.AutoSize = true;
 
+            this.labelGenre.Text = Movie.GenresAsSting;
+            this.labelGenre.AutoSize = true;
             this.labelOriginalTitle.Text = Movie.OriginalTitle;
             this.labelOriginalTitle.AutoSize = true;
 
@@ -44,11 +46,11 @@ namespace HobbyManiaManager
             this.circularProgressBarVotes.Value = (int)Math.Round(Movie.VoteAverage * 10);
             this.circularProgressBarVotes.Text = $"{Math.Round(Movie.VoteAverage * 10)}%";
 
-            this.labelOriginalTitle.Location = new Point(this.labelOriginalTitle.Location.X, this.labelTitle.Bottom + 10);
+            this.labelOriginalTitle.Location = new Point(this.labelOriginalTitle.Location.X, this.labelTitle.Bottom + 16);
             this.circularProgressBarVotes.Location = new Point(this.circularProgressBarVotes.Location.X, this.labelOriginalTitle.Bottom + 10);
             this.labelOverview.Location = new Point(this.circularProgressBarVotes.Right + 10, this.labelOriginalTitle.Bottom + 10);
             this.labelVotesCount.Location = new Point(this.labelVotesCount.Location.X, this.circularProgressBarVotes.Bottom + 5);
-
+            this.labelGenre.Location = new Point(this.labelGenre.Location.X, this.labelTitle.Bottom +5);
             CheckAvailability(movie);
             this.Refresh();
         }

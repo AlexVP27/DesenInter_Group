@@ -38,6 +38,7 @@
             this.buttonStartEndRent = new System.Windows.Forms.Button();
             this.circularProgressBarVotes = new CircularProgressBar.CircularProgressBar();
             this.labelVotesCount = new System.Windows.Forms.Label();
+            this.labelGenre = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPoster)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAvailable)).BeginInit();
             this.SuspendLayout();
@@ -67,7 +68,7 @@
             this.labelOriginalTitle.Location = new System.Drawing.Point(212, 54);
             this.labelOriginalTitle.MaximumSize = new System.Drawing.Size(600, 0);
             this.labelOriginalTitle.Name = "labelOriginalTitle";
-            this.labelOriginalTitle.Size = new System.Drawing.Size(600, 24);
+            this.labelOriginalTitle.Size = new System.Drawing.Size(600, 0);
             this.labelOriginalTitle.TabIndex = 2;
             this.labelOriginalTitle.Text = "Original Title";
             // 
@@ -163,10 +164,21 @@
             this.labelVotesCount.Text = "Votes Count";
             this.labelVotesCount.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // labelGenre
+            // 
+            this.labelGenre.AutoSize = true;
+            this.labelGenre.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
+            this.labelGenre.Location = new System.Drawing.Point(214, 41);
+            this.labelGenre.Name = "labelGenre";
+            this.labelGenre.Size = new System.Drawing.Size(58, 13);
+            this.labelGenre.TabIndex = 11;
+            this.labelGenre.Text = "labelGenre";
+            // 
             // MovieUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.labelGenre);
             this.Controls.Add(this.labelVotesCount);
             this.Controls.Add(this.circularProgressBarVotes);
             this.Controls.Add(this.buttonStartEndRent);
@@ -198,5 +210,6 @@
         private System.Windows.Forms.Button buttonStartEndRent;
         private CircularProgressBar.CircularProgressBar circularProgressBarVotes;
         private System.Windows.Forms.Label labelVotesCount;
+        private System.Windows.Forms.Label labelGenre;
     }
 }
